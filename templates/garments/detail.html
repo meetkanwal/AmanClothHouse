@@ -1,0 +1,24 @@
+{% extends 'garments/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ all_garments.product_image }}" class="img-responsive" width="230px" height="300px">
+            </div>
+            <div class="col-md-6" style="color: whitesmoke"><br><br>
+                <h4><b>Product name : {{ all_garments.product_name }}</b></h4>
+                <h4>Product price : {{ all_garments.product_price }}</h4>
+                <h4>Product Details : {{ all_garments.product_details }}</h4>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+</body>
+</html>0

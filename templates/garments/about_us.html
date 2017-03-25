@@ -1,0 +1,48 @@
+{% extends 'garments/base.html' %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}About_Us{% endblock %}</title>
+</head>
+<body>
+{% block body %}
+    <div class="container-fluid">
+        <div style="color: deepskyblue" class="text-center">
+            <h2>About Us</h2>
+            <div style="color: whitesmoke; padding-right: 150px; padding-left: 150px" class="text-center">
+
+                <p><h4>Aman Cloth House is the fun, friendly spot for style and decor that's as
+                expressive and unique as you are!We carry a curated selection of styles from
+                hundreds of independent designers.We listen to our community and put them at
+                the center of everything we do.Giving you plenty of opportunities to have
+                your voice heard is what Aman Cloth House fresh,relevant,and growing by leaps
+                and bounds!</h4>
+
+                </p>
+
+            </div>
+            <hr class="separator" style="color: aquamarine">
+            <h2>Meet Our Leaders</h2>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static "garments/images/papa.jpg" %}" class="img-responsive img-circle center-block">
+                <div class="text-center" style="color: whitesmoke">
+                    <h4>Harvinder Singh Sodhi</h4>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <img src="{% static "garments/images/kannu.jpg" %}" class="img-responsive img-circle center-block">
+                <div class="text-center" style="color: whitesmoke">
+                    <h4>Arsh Kanwal Sodhi</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+</body>

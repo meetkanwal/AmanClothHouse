@@ -1,0 +1,69 @@
+{% extends 'garments/base.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Contact_Us{% endblock %}</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+{% block body %}
+    <div class="container-fluid">
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                {% comment %}29.949441,73.619106{% endcomment %}
+                var uluru = {lat: 29.949441, lng: 73.619106};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 10,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+
+
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAifGMAWqbZePVgnOO5A7XVny1MikE6qng&callback=initMap">
+        </script>
+
+        <div class="row">
+            <div class="col-md-4 text-center" style="color: deepskyblue">
+                <h3>Reach Us</h3>
+                <div class="text-center" style="color: whitesmoke">
+                    <dt>Address</dt>
+                    <dd>Hospital Road</dd>
+                    <dd>Distt.SriGanganagar</dd>
+                </div>
+
+            </div>
+            <div class="col-md-4 text-center" style="color: deepskyblue">
+                <h3>General</h3>
+                <div class="text-center" style="color: whitesmoke">
+                    <dl>Contact Details</dl>
+                    <dd>Harvinder Singh</dd>
+                    <dd>9660147431</dd>
+                    <dd>Arsh Kanwal Sodhi</dd>
+                    <dd>08005791885</dd>
+                    <dd>meetkanwalsodhi@gmail.com</dd>
+
+
+                </div>
+            </div>
+            <div class="col-md-4 text-center" style="color: deepskyblue">
+                <h3>Message</h3>
+                <div class="text-center" style="color: whitesmoke">
+                    <h5>meetkanwalsodhi@gmail.com</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+</body>

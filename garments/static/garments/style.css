@@ -1,0 +1,29 @@
+.navbar{
+    border-radius: 0;
+}
+.navbar-brand{
+    font-family: 'Satisfy', cursive;
+}
+body{
+    background: black;
+}
+
+hr.separator {
+    border: none;
+    box-shadow: none;
+    height: 50px;
+    background-image: url(http://marketing.modcloth.com/pages/about-us/2017/01/images/squaggle.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 168px;
+}
+#map{
+     height: 400px;
+     width: 100%;
+}
+
+
+.thumbnail{
+    position:relative;
+
+}

@@ -1,0 +1,62 @@
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}AmanClothHouse{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href= {% static "garments/style.css"  %} />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <div id="map-canvas"></div>
+    <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button"class="navbar-toggle"  data-toggle="collapse" data-target="#topnavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'garments:index' %}" >AmanClothHouse</a>
+        </div>
+        <div class="collapse navbar-collapse" id="topnavbar">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="{% url "garments:index" %}" class="dropdown-toggle"data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>&nbsp;Gallery<span class="caret"></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url "garments:gallery men" %}">Men</a></li>
+                            <li><a href="{% url "garments:gallery women" %}">Women</a></li>
+                        </ul>
+
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{% url "garments:about_us" %}">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp;About Us
+
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{% url "garments:contact_us" %}">
+                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Contact Us
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+</nav>
+{% block body %}
+{% endblock %}
+
+</body>
+</html>
