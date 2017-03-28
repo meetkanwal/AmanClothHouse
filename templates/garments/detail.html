@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Details</title>
+    <title>{% block title %}{{ all_garments.product_name }}{% endblock %}</title>
 </head>
 <body>
 {% block body %}
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="{{ all_garments.product_image }}" class="img-responsive" width="230px" height="300px">
+                <img src="{{ all_garments.product_image.url }}" class="img-responsive" width="480px" height="640px">
             </div>
             <div class="col-md-6" style="color: whitesmoke"><br><br>
                 <h4><b>Product name : {{ all_garments.product_name }}</b></h4>

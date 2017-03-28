@@ -1,10 +1,12 @@
-.navbar{
+.navbar {
     border-radius: 0;
 }
-.navbar-brand{
+
+.navbar-brand {
     font-family: 'Satisfy', cursive;
 }
-body{
+
+body {
     background: black;
 }
 
@@ -17,13 +19,38 @@ hr.separator {
     background-position: center center;
     background-size: 168px;
 }
-#map{
-     height: 400px;
-     width: 100%;
+
+#map {
+    height: 400px;
+    width: 100%;
 }
 
+.thumbnail {
+    position: relative;
+}
 
-.thumbnail{
-    position:relative;
+.product-thumb {
+    height: 240px;
+    display: block;
+    background-color: transparent;
+    opacity: 1;
+}
 
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+}
+
+.product-product {
+    color: #3e4152;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

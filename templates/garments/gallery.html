@@ -2,7 +2,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}men_garments{% endblock %}</title>
+
+         <title>{% block title %} Garments {% endblock %}</title>
+
+
 
 </head>
 <body>
@@ -13,9 +16,14 @@
 
             <div class="col-sm-4 col-lg-2">
                 <div class="thumbnail">
-                    <img src="{{ garment.product_image }}" class="img-responsive" width="230px" height="230px">
+                    <div class="product-thumb">
+                        <img src="{{ garment.product_image.url }}" class="img-responsive" width="180px" height="240px">
+                    </div>
                     <div class="text-center">
-                        <h4><b>{{ garment.product_name }}</b></h4>
+
+                        <h4 class="product-product" style="padding: 2px">
+                            <b>{{ garment.product_name }}</b>
+                        </h4>
                     </div>
                     <!-- View Details -->
                     <a href="{% url 'garments:detail' garment.id %}" class="btn btn-primary btn-sm center-block"

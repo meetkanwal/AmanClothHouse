@@ -5,7 +5,7 @@ app_name = 'garments'
 
 urlpatterns = [
     #/garments/
-    url(r'^$', views.IndexView.as_view(), name = 'index'),
+    url(r'^$', views.index, name = 'index'),
     #/garments/contact_us/
     url(r'^contact_us/$', views.Contact_us_View.as_view(), name='contact_us'),
     #/garments/about_us/
